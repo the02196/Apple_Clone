@@ -1,0 +1,735 @@
+@charset "utf-8";
+
+/* root */
+:root {
+  --globalnav-background: rgba(251, 251, 253, 0.92);
+}
+
+.white {
+  color: white;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+/* global-header */
+
+header {
+  width: 100%;
+  height: 46px;
+  backdrop-filter: saturate(180%) blur(20px);
+  background-color: rgba(251, 251, 253, 0.8);
+  position: fixed;
+  top: 0;
+  z-index: 600;
+}
+
+header > ul > li > a > span  {
+  z-index: 800;
+}
+
+.global-header {
+  width: 980px;
+}
+
+/* SHOW-BOX */
+
+.blank {
+    width: 100%;
+    height: 0px;
+    position: fixed;
+    top: 46px;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .blank .inner-blank {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .blank .inner-blank .show-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0px;
+    background-color: rgba(251, 251, 253, 1);
+    transition: 0.35s 0.2s;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+.blank .inner-blank .show-box .show-box__inner-wrapper {
+    width: 1030px;
+    height: 100%;
+    background-color: rgba(251, 251, 253, 1);
+    display: flex;
+}
+
+.blank .inner-blank .show-box .show-box__inner-wrapper ul {
+  margin-top: 80px;
+  margin-right: 40px;
+}
+
+
+.blank .inner-blank .show-box .show-box__inner-wrapper ul li {
+  margin-top: 20px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.blank .inner-blank .show-box .show-box__inner-wrapper ul:nth-child(1) li {
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.blank .inner-blank .show-box .show-box__inner-wrapper ul li:nth-child(1){
+  font-size: 11px;
+  color: gray;
+  margin-bottom: 25px;
+  font-weight: 400;
+}
+
+.blur-box-wrapper{
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    position: fixed;
+}
+
+.blur-box-wrapper .blur-box, .blur-box-out{
+  width: 100%;
+  position: relative;
+}
+
+.blur-box-wrapper .blur-box::after, .blur-box-out::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0%;
+  opacity: 0;
+  background-color: rgba(242, 242, 242, 0.5);
+  backdrop-filter: saturate(180%) blur(10px);
+  transition: height 0s 0.2s, opacity 0.4s 0.2s;
+}
+
+.blank .inner-blank .show-box .show-box__inner-wrapper ul {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: 0.4s 0.3s;
+}
+
+header ul li:hover + .blank .inner-blank .show-box .show-box__inner-wrapper ul {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+header ul li:hover > .blank .inner-blank .show-box {
+  height: 600px;
+}
+
+
+header ul li:hover > .blank .inner-blank .show-box .show-box__inner-wrapper ul{
+  height: 600px;
+  opacity: 1;
+}
+
+.blur-box-open::after {
+    opacity: 1;
+    height: 100vh;
+}
+
+.show-box-opened {
+  height: 600px;
+}
+
+
+header .global-header .blank .inner-blank .show-box .show-box__inner-wrapper ul .small-text {
+  font-size: 9px;
+}
+
+.global-header {
+  max-width: 1024px;
+  height: 100%;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.global-header li {
+  z-index: 99;
+}
+
+/* section-content */
+
+.section-content {
+  width: 100%;
+  padding: 12px 0;
+  display: inline-block;
+  text-align: center;
+  margin-top: 46px;
+}
+
+.section-content .section-content__text {
+  font-size: 14px;
+}
+
+.section-content .section-content__link {
+  font-size: 14px;
+  color: #06c;
+  text-decoration: none;
+  position: relative;
+}
+
+.section-content .section-content__link:hover {
+  text-decoration: underline;
+}
+
+.section-content .section-content__link::after {
+  content: "";
+  display: inline-block;
+  top: 7px;
+  right: -10px;
+  width: 6px;
+  height: 6px;
+  border-left: 1px solid #06c;
+  border-bottom: 1px solid #06c;
+  margin-left: 10px;
+  transform: rotate(225deg);
+  position: absolute;
+}
+
+
+/* module-content */
+
+.macbook-air-15 {
+  text-decoration: none; /* 링크의 밑줄 제거 */
+  color: inherit; /* 링크의 색상 제거 */
+}
+
+.module-content {
+  width: 100%;
+  height: 580px;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  background-image: url(/images/hero_macbook_air_15__x63n8tqcpo2u_largetall.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 10px;
+  background-size: cover;
+}
+
+.module-content .unit-copy-wrapper {
+  padding-top: 65px;
+}
+
+.module-content .unit-copy-wrapper .unit-copy-wrapper__headline {
+  font-weight: 600;
+  font-size: 56px;
+  text-align: center;
+}
+
+.module-content .unit-copy-wrapper .unit-copy-wrapper__subhead {
+  font-weight: 400;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.module-content .cta-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+.module-content .cta-links .learn-more {
+  margin-right: 50px;
+}
+
+.module-content .cta-links .learn-more,
+.buy {
+  font-size: 19px;
+  font-weight: 600;
+  color: #06c;
+  text-decoration: none;
+  position: relative;
+  z-index: 1;
+}
+
+.module-content .cta-links .learn-more:hover,
+.buy:hover {
+  text-decoration: underline;
+}
+
+.module-content .cta-links .learn-more::after,
+.buy::after {
+  content: "";
+  display: inline-block;
+  top: 10px;
+  right: -13px;
+  width: 6px;
+  height: 6px;
+  border-left: 1px solid #06c;
+  border-bottom: 1px solid #06c;
+  margin-left: 10px;
+  transform: rotate(225deg);
+  position: absolute;
+}
+
+.headline2,
+.subhead2 {
+  color: white;
+}
+
+.content2 {
+  background-image: url(/images/hero_iphone14pro_spring__9xo85pm6sbmm_largetall.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.content3 {
+  background-image: url(/images/hero_iphone14_yellow__eun20sn4imi6_largetall.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Section */
+
+.homepage-section {
+  display: grid;
+  height: 100%;
+  grid-template-rows: repeat(3, 580px);
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+
+.section__headline {
+  font-weight: 600;
+  font-size: 36px;
+  text-align: center;
+}
+
+.section__subhead {
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.section__learn-more,
+.section__buy {
+  font-size: 14px;
+  font-weight: 600;
+  color: #06c;
+  text-decoration: none;
+  position: relative;
+}
+
+.cta-links__box {
+  position: relative;
+}
+
+.cta-links__box__left {
+  margin-right: 50px;
+}
+
+.cta-links__box:hover {
+  text-decoration: underline;
+  color: #06c;
+}
+
+.cta-links__box::after {
+  content: "";
+  display: inline-block;
+  top: 6.5px;
+  right: -10px;
+  width: 5px;
+  height: 5px;
+  border-left: 1px solid #06c;
+  border-bottom: 1px solid #06c;
+  margin-left: 10px;
+  transform: rotate(225deg);
+  position: absolute;
+}
+
+.watch-series {
+  background-image: url(../images/promo_logo_apple_watch_series_8__ee6riplsucuq_large.png);
+  background-repeat: no-repeat;
+  width: 137px;
+  height: 52px;
+  background-size: 137px 52px;
+  background-position: center;
+  margin: 0 auto;
+}
+
+.m2 {
+  width: 37px;
+  height: 37px;
+  background-repeat: no-repeat;
+  background-size: 37px 37px;
+  background-image: url("/images/promo_m2_chip__enw2kz91lsuq_large.png");
+  background-position: center;
+  display: inline-block;
+  margin-left: 4px;
+}
+
+.m2__center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section1__image {
+  background-image: url(/images/promo_mac_studio__f6bq9ooh0qaa_large.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.section2__image {
+  background-image: url(/images/promo_mac_pro__bm1qf6c94p42_large.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.section3__image {
+  background-image: url(/images/promo_apple_watch_series_8_spring__d9hfvufh7hyu_large.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.section4__image {
+  background-image: url(/images/promo_ipadpro_refresh__evi9utuixwuq_large.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.section5__image {
+  background-image: url(/images/promo_airpods_pro_avail__gaxggskofx6y_large.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.section6__image {
+  background-image: url(/images/promo_ipad__fioegapg12qi_large.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* tv-gallery */
+
+.main-slide {
+  margin: 12px 0px;
+  width: 100%;
+  height: 706px;
+  position: relative;
+}
+
+.main-slide .swiper-wrapper .swiper-slide{
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 1;
+  width: 1250px !important;
+}
+.main-slide .swiper-pagination{
+  bottom: -30px !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: rgb(0, 0, 0);
+  opacity: 0.45;
+  margin-right: 10px !important;
+}
+
+.swiper-pagination-bullet-active{
+  background-color: rgb(53, 53, 53);
+  opacity: 1;
+}
+
+.swiper-slide {
+  opacity: 0.5 !important;
+}
+
+.swiper-slide-active {
+  opacity: 1 !important;
+}
+
+.swiper-slide1 {
+  background-image: url(/images/1250x703\ \(1\).jpg);
+}
+
+.swiper-slide2 {
+  background-image: url(/images/1250x703\ \(2\).jpg);
+}
+
+.swiper-slide3 {
+  background-image: url(/images/1250x703\ \(3\).jpg);
+  position: relative;
+}
+
+.swiper-slide4 {
+  background-image: url(/images/1250x703\ \(4\).jpg);
+}
+
+.swiper-slide5 {
+  background-image: url(/images/1250x703\ \(5\).jpg);
+}
+
+.swiper-slide6 {
+  background-image: url(/images/1250x703\ \(6\).jpg);
+}
+
+.swiper-slide7 {
+  background-image: url(/images/1250x703\ \(7\).jpg);
+}
+
+.swiper-slide8 {
+  background-image: url(/images/1250x703\ \(8\).jpg);
+}
+
+.swiper-slide9 {
+  background-image: url(/images/1250x703\ \(9\).jpg);
+}
+
+.swiper-slide10 {
+  background-image: url(/images/1250x703\ \(10\).jpg);
+}
+
+.play-btn {
+  position: absolute;
+  left: 70px;
+  bottom: 30px;
+  height: 40px;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 3px 23px 3px 23px;
+  background-color: white;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.play-btn span{
+  transform: translateY(1px);
+}
+
+.play-btn i {
+  font-size: 15px;
+  margin-left: 7px;
+  transition: 0.3s;
+}
+
+.play-btn::after{
+  content: '드라마 ·';
+  width: 300px;
+  position: absolute;
+  bottom: 50%;
+  transform: translateY(50%);
+  left: 180px;
+  font-weight: bold;
+  font-size: 19px;
+  color: white;
+}
+
+.play-btn::before{
+  content: '4개의 세대. 하나의 운명.';
+  width: 300px;
+  position: absolute;
+  bottom: 50%;
+  transform: translateY(50%);
+  left: 255px;
+  font-weight: 400;
+  font-size: 19px;
+  color: white;
+}
+
+.swiper-slide-active .play-btn {
+  opacity: 1;
+  bottom: 45px;
+  transition: 1s;
+}
+
+
+
+
+/* presentation */
+
+.tablelist-wrapper {
+  margin: 0 auto;
+  width: 100%;
+  height: 10px;
+  margin-top: 20px;
+}
+
+.tablelist-wrapper .tablelist {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.tablelist-wrapper .tablelist .presentation {
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.tablelist-wrapper .tablelist .presentation:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.tablelist-wrapper .tablelist .presentation3 {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.tablelist-wrapper .tablelist .presentation:not(:last-child) {
+  margin-right: 13px;
+}
+
+/* footer */
+
+.global-footer {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.03);
+  margin-top: 50px;
+}
+
+.global-footer .footer-content-box {
+  max-width: 980px;
+  margin: 0 auto;
+  padding-bottom: 25px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.17);
+}
+
+.foot.note {
+  width: 100%;
+  margin-bottom: 40px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+}
+
+.foot-note__ul {
+  padding-top: 10px;
+}
+
+.foot-note__li {
+  font-size: 12px;
+  margin-top: 12px;
+  color: rgba(0, 0, 0, 0.45);
+  letter-spacing: 0.7px;
+  font-weight: 400;
+}
+
+.gf-directory {
+  display: flex;
+  justify-content: center;
+}
+
+.gf-directory__column {
+  width: 196px;
+  height: 363px;
+}
+
+.gf-directory-column-section-title {
+  padding-top: 20px;
+  font-weight: 600;
+  font-size: 11px;
+}
+
+.gf-directory-column-section-item {
+  margin-top: 13px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.gf-directory-column-section-item:hover {
+  text-decoration: underline;
+}
+
+.footer-section {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.gf-footer-shop {
+  margin-top: 30px;
+  font-size: 11px;
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: 400;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.17);
+  padding-bottom: 15px;
+}
+
+.gf-footer-shop a {
+  color: #06c;
+  text-decoration-color: #06c;
+}
+
+.gf-footer-local {
+  position: relative;
+}
+
+.gf-footer-local a {
+  color: rgba(0, 0, 0, 0.7);
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 600;
+  position: absolute;
+  right: 0;
+  top: 10px;
+}
+
+.gf-footer-legal {
+  padding: 10px 0;
+  font-size: 11px;
+  color: rgba(0, 0, 0, 0.8);
+  display: flex;
+}
+
+.gf-footer-legal-copyright {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.gf-footer-legal-links {
+  display: flex;
+}
+
+.gf-footer-legal-links-item {
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.gf-footer-legal-links-item:hover {
+  text-decoration: underline;
+}
+
+.gf-footer-legal-links-item:first-child {
+  padding-left: 25px;
+}
+
+.gf-footer-legal-links-item:not(:last-child) {
+  border-right: 1px solid rgba(0, 0, 0, 0.8);
+}
+
+.gf-info {
+  display: flex;
+  font-size: 10px;
+  padding-bottom: 30px;
+}
+
+.gf-info-item:not(last-child) {
+  margin-right: 4px;
+  color: rgba(0, 0, 0, 0.5);
+}
