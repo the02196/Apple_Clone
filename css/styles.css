@@ -3,7 +3,7 @@
 }
 
 * {
-  font-family: "San Francisco", Arial, Helvetica, sans-serif;
+  font-family: "San Francisco";
 }
 
 body {
@@ -278,7 +278,6 @@ header .global-header li a span svg {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  font-family: "San Francisco";
 }
 .module-content:nth-of-type(1), .module-content:nth-of-type(2) {
   margin-bottom: 12px;
@@ -985,6 +984,9 @@ header .global-header li a span svg {
   .hedaer {
     transition: 5s !important;
   }
+  .global-header {
+    max-width: 734px;
+  }
   .module-content {
     max-width: 734px;
     height: 500px;
@@ -1208,7 +1210,7 @@ header .global-header li a span svg {
     margin-left: 30px;
   }
   .shopping-box .show-box__inner-wrapper ul:nth-child(1) {
-    margin-top: 40px;
+    margin-top: 60px;
   }
   .shopping-box .show-box__inner-wrapper ul:nth-child(1) li p:nth-child(1) {
     font-size: 25px;
@@ -1330,7 +1332,7 @@ header .global-header li a span svg {
     margin-left: 30px;
   }
   .shopping-box .show-box__inner-wrapper ul:nth-child(1) {
-    margin-top: 40px;
+    margin-top: 60px;
   }
   .shopping-box .show-box__inner-wrapper ul:nth-child(1) li p:nth-child(1) {
     font-size: 25px;
