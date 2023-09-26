@@ -833,7 +833,7 @@ header .global-header li a span svg {
 .gf-directory {
   display: flex;
   width: 100%;
-  margin: 0 12px;
+  padding: 0 12px;
 }
 
 .gf-directory__column {
@@ -920,6 +920,7 @@ header .global-header li a span svg {
   display: flex;
   font-size: 10px;
   padding-bottom: 30px;
+  flex-wrap: wrap;
 }
 
 .gf-info-item:not(last-child) {
@@ -1065,6 +1066,13 @@ header .global-header li a span svg {
   .swiper-slide .play-btn {
     bottom: 12px;
     width: 100px;
+  }
+  .swiper-slide .play-btn span {
+    margin-left: 5px;
+    font-size: 12px;
+  }
+  .swiper-slide .play-btn i {
+    padding-left: 6px;
   }
   .swiper-slide p:nth-child(2) {
     width: 75%;
@@ -1239,6 +1247,12 @@ header .global-header li a span svg {
     width: 25px;
     height: 25px;
     left: -5px;
+  }
+  .gf-footer-legal-links {
+    display: none;
+  }
+  .gf-footer-local a {
+    padding-right: 23px;
   }
 }
 @media only screen and (min-width: 734px) and (max-width: 833px) {
@@ -1436,6 +1450,9 @@ header .global-header li a span svg {
   .rotateX::after {
     transform: translateY(-50%) rotate(-45deg) !important;
   }
+  .gf-footer-legal-links {
+    display: none;
+  }
 }
 @media only screen and (min-width: 833px) and (max-width: 1068px) {
   .module-content {
@@ -1510,6 +1527,18 @@ header .global-header li a span svg {
   .play-btn {
     left: 35px;
     bottom: 16px;
+  }
+  .gf-footer-legal-links {
+    display: none;
+  }
+  .gf-info li {
+    padding: 5px 0px;
+  }
+  .gf-info li:last-child {
+    padding-bottom: 0;
+  }
+  .gf-footer-local a {
+    padding-right: 23px;
   }
 }
 @media only screen and (min-width: 1068px) and (max-width: 1440px) {

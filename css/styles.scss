@@ -921,7 +921,7 @@ header {
 .gf-directory {
   display: flex;
   width: 100%;
-  margin: 0 12px;
+  padding: 0 12px;
 }
 
 .gf-directory__column {
@@ -1014,10 +1014,12 @@ header {
   display: flex;
   font-size: 10px;
   padding-bottom: 30px;
+  flex-wrap: wrap;
 }
 
 .gf-info-item {
   &:not(last-child) {
+ 
     margin-right: 4px;
     color: rgba(0, 0, 0, 0.5);
   }
@@ -1201,6 +1203,13 @@ header {
     .play-btn {
       bottom: 12px;
       width: 100px;
+      span {
+        margin-left: 5px;
+        font-size: 12px;
+      }
+      i{
+        padding-left: 6px;
+      }
     }
 
     p:nth-child(2) {
@@ -1417,8 +1426,14 @@ header {
    }
   }
 }
-
-
+.gf-footer-legal-links{
+  display: none;
+}
+.gf-footer-local{
+  a{
+    padding-right: 23px;
+  }
+ }
 }
 
 
@@ -1486,6 +1501,7 @@ header {
   .play-btn {
     left: 35px;
     bottom: 16px;
+   
   }
 
   .global-header {
@@ -1669,10 +1685,14 @@ header {
       transform: translateY(-50%) rotate(-45deg) !important;
     }
   }
+  .gf-footer-legal-links{
+    display: none;
+}
 }
 
 // ### 태블릿, 랩탑
 @media only screen and (min-width: 833px) and (max-width: 1068px) {
+
   .module-content {
     max-width: 1068px;
     height: 650px;
@@ -1771,7 +1791,24 @@ header {
   .play-btn {
     left: 35px;
     bottom: 16px;
+   
   }
+  .gf-footer-legal-links{
+    display: none;
+}
+.gf-info{
+  li{
+    padding: 5px 0px;
+    &:last-child{
+      padding-bottom: 0;
+    }
+  }
+}
+ .gf-footer-local{
+  a{
+    padding-right: 23px;
+  }
+ }
 }
 
 
