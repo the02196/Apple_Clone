@@ -2,4 +2,4 @@
 Apple Clone Coding
 
 
-<img src="./public/images/Apple_Korea.png" />
+<img src="./Apple_Korea.png" />
