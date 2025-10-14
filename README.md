@@ -2,7 +2,9 @@
 
 <img src="./capture.png" />
 
-링크 : [apple-clone-mu.vercel.app](https://apple-clone-mu.vercel.app)
+## 배포 링크 
+
+[apple-clone-mu.vercel.app](https://apple-clone-mu.vercel.app)
 
 ## 선정 배경
 
